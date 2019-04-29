@@ -1,7 +1,11 @@
 # AdaFM 
 
 <p align="center">
-  <img height="300" src="./figures/framework.PNG">
+  <img height="250" src="./figures/framework.PNG">
+</p>
+
+<p align="center">
+  <img height="250" src="./figures/modulation.PNG">
 </p>
 
 ### BibTex
