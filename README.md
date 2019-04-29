@@ -1,4 +1,4 @@
-# AdaFM 
+# AdaFM [paper](https://arxiv.org/abs/1904.08118)
 
 <p align="center">
   <img height="250" src="./figures/framework.PNG">
