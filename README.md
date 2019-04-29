@@ -1,7 +1,7 @@
 # AdaFM 
 
 <p align="center">
-  <img height="350" src="./figures/framework.PNG">
+  <img height="300" src="./figures/framework.PNG">
 </p>
 
 ### BibTex
