@@ -1,0 +1,68 @@
+// Not total the same as SRResNet in <Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network>
+// With 16 Residual blocks w/o BN
+{
+  "name": "debug_001_SRResNet_PSNR_x4_DIV2K" //  please remove "debug_" during training
+  , "use_tb_logger": true
+  , "model":"sr"
+  , "finetune_norm": false
+  , "scale": 1
+  , "crop_size": 0 // 0 for image restoration | upscale (x2, x3, x4) for SR
+  , "gpu_ids": [0]
+
+  , "datasets": {
+    "train": {
+      "name": "DIV2K"
+      , "mode": "LRHR"
+      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_sub.lmdb"
+      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_sub_bicx4.lmdb"
+      , "subset_file": null
+      , "use_shuffle": true
+      , "n_workers": 8
+      , "batch_size": 16
+      , "HR_size": 96 // 128 | 96
+      , "use_flip": true
+      , "use_rot": true
+    }
+    , "val": {
+      "name": "val_set5"
+      , "mode": "LRHR"
+      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5"
+      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5_bicx4"
+    }
+  }
+
+  , "path": {
+    "root": "/home/jwhe/workspace/BasicSR"
+    // , "resume_state": "../experiments/debug_001_RRDB_PSNR_x4_DIV2K/training_state/200.state"
+    , "pretrain_model_G": null
+  }
+
+  , "network_G": {
+    "which_model_G": "adaptive_resnet"
+    , "norm_type": "basic" // basic | adafm | null | instance | batch
+    , "nf": 64
+    , "nb": 16
+    , "in_nc": 3
+    , "out_nc": 3
+    , "adafm_ksize": null
+  }
+
+  , "train": {
+    "lr_G": 1e-4
+    , "lr_scheme": "MultiStepLR"
+    , "lr_steps": [500000]
+    , "lr_gamma": 0.1
+
+    , "pixel_criterion": "l1"
+    , "pixel_weight": 1.0
+    , "val_freq": 5e3
+
+    , "manual_seed": 0
+    , "niter": 1e6
+  }
+
+  , "logger": {
+    "print_freq": 200
+    , "save_checkpoint_freq": 5e3
+  }
+}
