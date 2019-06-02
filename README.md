@@ -7,7 +7,6 @@
 ```python
 class AdaptiveFM(nn.Module):
     def __init__(self, in_channel, kernel_size):
-
         super(AdaptiveFM, self).__init__()
         padding = (kernel_size - 1) // 2
         self.transformer = nn.Conv2d(in_channel, in_channel, kernel_size, padding=padding, groups=in_channel)
