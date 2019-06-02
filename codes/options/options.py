@@ -15,13 +15,11 @@ def parse(opt_path, is_train=True):
     opt = json.loads(json_str, object_pairs_hook=OrderedDict)
 
     opt['is_train'] = is_train
-    scale = opt['scale']
 
     # datasets
     for phase, dataset in opt['datasets'].items():
         phase = phase.split('_')[0]
         dataset['phase'] = phase
-        dataset['scale'] = scale
         is_lmdb = False
         if 'dataroot_HR' in dataset and dataset['dataroot_HR'] is not None:
             dataset['dataroot_HR'] = os.path.expanduser(dataset['dataroot_HR'])
@@ -60,9 +58,6 @@ def parse(opt_path, is_train=True):
         results_root = os.path.join(opt['path']['root'], 'results', opt['name'])
         opt['path']['results_root'] = results_root
         opt['path']['log'] = results_root
-
-    # network
-    opt['network_G']['scale'] = scale
 
     # export CUDA_VISIBLE_DEVICES
     gpu_list = ','.join(str(x) for x in opt['gpu_ids'])

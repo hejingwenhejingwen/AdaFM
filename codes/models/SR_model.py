@@ -7,7 +7,6 @@ from torch.optim import lr_scheduler
 
 import models.networks as networks
 from .base_model import BaseModel
-
 logger = logging.getLogger('base')
 
 
@@ -44,9 +43,8 @@ class SRModel(BaseModel):
                     if k.find('transformer') >= 0:
                         v.requires_grad = True
                         v.data.zero_()
-                        logger.info('Params [{:s}] initialized to 0.'.format(k))
                         optim_params.append(v)
-                        logger.info('Params [{:s}] will optimize.'.format(k))
+                        logger.info('Params [{:s}] initialized to 0 and will optimize.'.format(k))
             else:
                 optim_params = list(self.netG.parameters())
 
@@ -117,6 +115,11 @@ class SRModel(BaseModel):
                 self.load_network(load_path_G, self.netG, strict=False)
             else:
                 self.load_network(load_path_G, self.netG)
+
+    def update(self, new_model_dict):
+        if isinstance(self.netG, nn.DataParallel):
+            network = self.netG.module
+            network.load_state_dict(new_model_dict)
 
     def save(self, iter_step):
         self.save_network(self.netG, 'G', iter_step)

@@ -3,10 +3,10 @@ function generate_mod_LR_bic()
 
 %% set parameters
 % comment the unnecessary line
-input_folder = '/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_sub';
+input_folder = '../../datasets/DIV2K800/DIV2K800_sub';
 % save_mod_folder = '';
 % save_LR_folder = '';
-save_bic_folder = '/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_sub_bicx4';
+save_bic_folder = '../../datasets/DIV2K800/DIV2K800_sub_bicx4';
 
 up_scale = 4;
 mod_scale = 4;

@@ -1,38 +1,37 @@
 {
-  "name": "debug_001_SRResNet_PSNR_x4_DIV2K" //  please remove "debug_" during training
-  , "use_tb_logger": true // use tensorboard
+  "name": "debug_001_adafmnet_noise75_DIV2K" // !!! please remove "debug_" during training
+  , "use_tb_logger": true
   , "model":"sr"
-  , "finetune_norm": true
-  , "scale": 1
-  , "crop_size": 0 // 0 for image restoration | upscale (x2, x3, x4) for SR
+  , "finetune_norm": true //finetune the adafm layers
+  , "crop_size": 0
   , "gpu_ids": [0]
 
   , "datasets": {
     "train": {
       "name": "DIV2K"
       , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_sub.lmdb"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_sub_bicx4.lmdb"
+      , "dataroot_HR": "../datasets/DIV2K800/DIV2K800_sub"
+      , "dataroot_LR": "../datasets/DIV2K800/DIV2K800_sub_noise75" // path for LR images
       , "subset_file": null
       , "use_shuffle": true
       , "n_workers": 8
       , "batch_size": 16
-      , "HR_size": 96 // 128 | 96
+      , "HR_size": 96
       , "use_flip": true
       , "use_rot": true
     }
-    , "val": {
-      "name": "val_set5"
+   , "val": {
+      "name": "val_CBSD68"
       , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5_bicx4"
+      , "dataroot_HR": "../datasets/val_CBSD68/CBSD68"
+      , "dataroot_LR": "../datasets/val_CBSD68/CBSD68_noise75" // path for LR images
     }
   }
 
   , "path": {
-    "root": "/home/jwhe/workspace/BasicSR"
-    // , "resume_state": "../experiments/debug_001_RRDB_PSNR_x4_DIV2K/training_state/200.state"
-    , "pretrain_model_G": null
+    "root": "../" // root path
+    // , "resume_state": "../experiments/debug_001_adafmnet_noise75_DIV2K/training_state/200.state"
+    , "pretrain_model_G": "../experiments/debug_001_basicmodel_noise15_DIV2K/models/8_G.pth" // the path for basic model
   }
 
   , "network_G": {
@@ -42,7 +41,7 @@
     , "nb": 16
     , "in_nc": 3
     , "out_nc": 3
-    , "adafm_ksize": 1 // 1 | 3 | 5 | 7
+    , "adafm_ksize": 1 // the filter size of adafm during finetune. 1 | 3 | 5 | 7
   }
 
   , "train": {
@@ -56,7 +55,7 @@
     , "val_freq": 5e3
 
     , "manual_seed": 0
-    , "niter": 5e6
+    , "niter": 5e6 // the number of the whole training iterations
   }
 
   , "logger": {

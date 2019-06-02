@@ -16,7 +16,7 @@ def get_norm_layer(norm_type, adafm_ksize=1):
     elif norm_type == 'basic':
         layer = functools.partial(Basic)
     elif norm_type == 'adafm':
-        layer = functools.partial(AdaptiveFM(kernel_size=adafm_ksize))
+        layer = functools.partial(AdaptiveFM, kernel_size=adafm_ksize)
     else:
         raise NotImplementedError('normalization layer [{:s}] is not found'.format(norm_type))
     return layer

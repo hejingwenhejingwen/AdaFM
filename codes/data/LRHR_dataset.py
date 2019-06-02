@@ -21,24 +21,14 @@ class LRHRDataset(data.Dataset):
         self.LR_env = None  # environment for lmdb
         self.HR_env = None
 
-        # read image list from subset list txt
-        if opt['subset_file'] is not None and opt['phase'] == 'train':
-            with open(opt['subset_file']) as f:
-                self.paths_HR = sorted([os.path.join(opt['dataroot_HR'], line.rstrip('\n')) \
-                        for line in f])
-            if opt['dataroot_LR'] is not None:
-                raise NotImplementedError('Now subset only supports generating LR on-the-fly.')
-        else:  # read image list from lmdb or image files
-            self.HR_env, self.paths_HR = util.get_image_paths(opt['data_type'], opt['dataroot_HR'])
-            self.LR_env, self.paths_LR = util.get_image_paths(opt['data_type'], opt['dataroot_LR'])
+        self.HR_env, self.paths_HR = util.get_image_paths(opt['data_type'], opt['dataroot_HR'])
+        self.LR_env, self.paths_LR = util.get_image_paths(opt['data_type'], opt['dataroot_LR'])
 
         assert self.paths_HR, 'Error: HR path is empty.'
         if self.paths_LR and self.paths_HR:
             assert len(self.paths_LR) == len(self.paths_HR), \
                 'HR and LR datasets have different number of images - {}, {}.'.format(\
                 len(self.paths_LR), len(self.paths_HR))
-
-        self.random_scale_list = [1]
 
     def __getitem__(self, index):
         HR_path, LR_path = None, None

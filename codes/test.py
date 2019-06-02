@@ -1,9 +1,7 @@
 import os
-import sys
 import logging
 import time
 import argparse
-import numpy as np
 from collections import OrderedDict
 
 import options.options as option

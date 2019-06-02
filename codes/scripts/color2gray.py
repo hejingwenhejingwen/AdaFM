@@ -12,8 +12,8 @@ from utils.progress_bar import ProgressBar
 def main():
     """A multi-thread tool for converting RGB images to gary/Y images."""
 
-    input_folder = '/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800'
-    save_folder = '/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_gray'
+    input_folder = '../../datasets/DIV2K800/DIV2K800'
+    save_folder = '../../datasets/DIV2K800/DIV2K800_gray'
     mode = 'gray'  # 'gray' | 'y': Y channel in YCbCr space
     compression_level = 3  # 3 is the default value in cv2
     # CV_IMWRITE_PNG_COMPRESSION from 0 to 9. A higher value means a smaller size and longer

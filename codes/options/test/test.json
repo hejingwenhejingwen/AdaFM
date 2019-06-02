@@ -1,29 +1,29 @@
 {
-  "name": "SRResNet_bicx4_in3nf64nb16"
+  "name": "test_001_adafmnet_noise75_DIV2K"
   , "suffix": null
   , "model": "sr"
   , "crop_size": 0  // 0 for image restoration | upscale (x2,3,4) for SR
-  , "scale": 1
   , "gpu_ids": [0]
+
+  , "interpolate_stride": null // 0.1, 0.05, 0.01, ... for modulation testing
 
   , "datasets": {
     "test_1": { // the 1st test dataset
-      "name": "set5"
+      "name": "CBSD68"
       , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5_bicLRx4"
+      , "dataroot_HR": "../datasets/val_CBSD68/CBSD68" // path for HR images
+      , "dataroot_LR": "../datasets/val_CBSD68/CBSD68_noise75" // path for LR images
     }
     , "test_2": { // the 2nd test dataset
-      "name": "set14"
-      , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14_bicLRx4"
+      "name": "personal_images"
+      , "mode": "LR"
+      , "dataroot_LR": "../datasets/personal_images/personal_images_noise75"
     }
   }
 
   , "path": {
-    "root": "/home/xtwang/Projects/BasicSR"
-    , "pretrain_model_G": "../experiments/pretrained_models/SRResNet_bicx4_in3nf64nb16.pth"
+    "root": "../"
+    , "pretrain_model_G": "../experiments/debug_001_adafmnet_noise75_DIV2K/models/8_G.pth"
   }
 
   , "network_G": {
