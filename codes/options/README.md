@@ -62,7 +62,7 @@ To finetune the AdaFM layers in AdaFM-Net, you need at least modify the followin
   }
 ```
 
-# test_json
+## test_json
 ### normal testing
 please see the example config file [test](test/test.json)
 

@@ -1,4 +1,4 @@
-# AdaFM [paper](https://arxiv.org/abs/1904.08118)
+# Modulating Image Restoration with Continual Levels via Adaptive Feature Modification Layers [paper](https://arxiv.org/abs/1904.08118)
 
 <p align="center">
   <img height="250" src="./figures/framework.PNG">
@@ -26,11 +26,6 @@ class AdaptiveFM(nn.Module):
     archivePrefix={arXiv},
     primaryClass={cs.CV}
     }
-    
-## Table of Contents
-1. [Dependencies](#dependencies)
-1. [Codes](#codes)
-1. [Usage](#usage)
 
 ### Dependencies
 
