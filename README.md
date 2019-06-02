@@ -47,14 +47,14 @@ We also provides some useful scripts.
 ## How to Test
 
 ### basic model and AdaFM-Net
-1. Modify the configuration file `options/test/test.json` 
+1. Modify the configuration file `options/test/test.json` (refer to [`options`](codes/options))
 1. Run command: `python test.py -opt options/test/test.json`
 
 ### modulation testing
 1. Modify the configuration file `options/test/test.json` 
 1. Run command: `python interpolate.py -opt options/test/test.json`
-####or:
-1. Use [`scripts/net_interp.py`](scripts/net_interp.py) to obtain the interpolated network.
+#### or:
+1. Use [`scripts/net_interp.py`](codes/scripts/net_interp.py) to obtain the interpolated network.
 1. Modify the configuration file `options/test/test.json` and run command: `python test.py -opt options/test/test.json`
 
 ## How to Train

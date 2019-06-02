@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab2626f5-e933-4ed4-8637-93fcf2f27a58" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/AdaFM.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codes/interpolate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codes/scripts/generate_LR_JPEG.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codes/scripts/generate_LR_noise.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/data/LRHR_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/data/LRHR_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/data/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/codes/data/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/data/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/data/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/models/SR_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/models/SR_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/models/modules/block.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/models/modules/block.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/options/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/codes/options/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/options/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/options/options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/options/test/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/codes/options/test/test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/options/train/train_adafm.json" beforeDir="false" afterPath="$PROJECT_DIR$/codes/options/train/train_adafm.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/options/train/train_basic.json" beforeDir="false" afterPath="$PROJECT_DIR$/codes/options/train/train_basic.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/scripts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/codes/scripts/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/scripts/color2gray.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/scripts/color2gray.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/scripts/create_lmdb.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/scripts/create_lmdb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/scripts/extract_subimgs_single.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/scripts/extract_subimgs_single.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/scripts/generate_mod_LR_bic.m" beforeDir="false" afterPath="$PROJECT_DIR$/codes/scripts/generate_mod_LR_bic.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/scripts/net_interp.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/scripts/net_interp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/pretrained_models/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/modulation.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tb_logger/README.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,29 +13,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/options/test/test.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train_adafm.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/codes/options/train/train_adafm.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-870">
-              <caret line="12" column="58" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train_basic.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/options/train/train_basic.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="65" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="65" />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-7">
+                <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -114,7 +67,6 @@
         <option value="$PROJECT_DIR$/codes/train.py" />
         <option value="$PROJECT_DIR$/codes/options/test/interpolate.json" />
         <option value="$PROJECT_DIR$/codes/scripts/extract_subimgs_single.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/codes/data/util.py" />
         <option value="$PROJECT_DIR$/codes/options/train/train_basic.json" />
         <option value="$PROJECT_DIR$/codes/options/README.md" />
@@ -124,6 +76,7 @@
         <option value="$PROJECT_DIR$/codes/interpolate.py" />
         <option value="$PROJECT_DIR$/codes/models/SR_model.py" />
         <option value="$PROJECT_DIR$/codes/options/test/test.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -272,13 +225,13 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" visible="true" weight="0.3281075" />
+      <window_info active="true" anchor="bottom" id="File Transfer" visible="true" weight="0.3281075" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="right" id="Remote Host" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20869099" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20869099" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
@@ -570,16 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-744">
-            <caret line="8" column="46" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="46" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codes/models/base_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -610,10 +553,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codes/options/test/test.json">
+    <entry file="file://$PROJECT_DIR$/codes/options/train/train_adafm.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="37" />
+        <state relative-caret-position="-870">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -624,10 +567,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codes/options/train/train_adafm.json">
+    <entry file="file://$PROJECT_DIR$/codes/options/test/test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-870">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="58" />
+        <state relative-caret-position="192">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-7">
+            <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
