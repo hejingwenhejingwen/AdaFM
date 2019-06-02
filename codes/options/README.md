@@ -62,11 +62,11 @@ To finetune the AdaFM layers in AdaFM-Net, you need at least modify the followin
   }
 ```
 
-#test_json
-###normal testing
+# test_json
+### normal testing
 please see the example config file [test](test/test.json)
 
-###modulation testing
+### modulation testing
 for modulation testing, you should specify the interpolation stride:
 ```c++
 , "interpolate_stride": 0.1 // 0.1 | 0.05 | 0.01
