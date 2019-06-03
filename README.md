@@ -17,13 +17,12 @@ class AdaptiveFM(nn.Module):
 
 ### BibTex
 
-    @misc{he2019modulating,
-    title={Modulating Image Restoration with Continual Levels via Adaptive Feature Modification Layers},
-    author={Jingwen He and Chao Dong and Yu Qiao},
-    year={2019},
-    eprint={1904.08118},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+    @InProceedings{he2019modulating,
+    author = {He, Jingwen and Dong, Chao and Qiao, Yu},
+    title = {Modulating Image Restoration with Continual Levels via Adaptive Feature Modification Layers},
+    booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month = {June},
+    year = {2019}
     }
 
 ### Dependencies
