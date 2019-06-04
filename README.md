@@ -1,4 +1,5 @@
 # Modulating Image Restoration with Continual Levels via Adaptive Feature Modification Layers [paper](https://arxiv.org/abs/1904.08118)
+By Jingwen He, [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=en), and [Yu Qiao](http://mmlab.siat.ac.cn/yuqiao/)
 
 <p align="center">
   <img height="250" src="./figures/framework.PNG">
@@ -32,8 +33,8 @@ class AdaptiveFM(nn.Module):
 - Python packages: `pip install numpy opencv-python lmdb`
 - [option] Python packages: [`pip install tensorboardX`](https://github.com/lanpa/tensorboardX), for visualizing curves.
 
-### Pretrained models
-We provide a model of AdaFM-Net ([`experiments/pretrained_models`](experiments/pretrained_models)) that deals with denoising from σ15 to σ75. Please run the following command directly:
+# Pretrained models
+We provide a pretrained model for AdaFM-Net ([`experiments/pretrained_models`](experiments/pretrained_models)) that deals with denoising from σ15 to σ75. Please run the following command directly:
 ```c++
 python interpolate.py -opt options/test/test.json
 ```
