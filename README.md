@@ -34,8 +34,9 @@ class AdaptiveFM(nn.Module):
 - [option] Python packages: [`pip install tensorboardX`](https://github.com/lanpa/tensorboardX), for visualizing curves.
 
 # Pretrained models
-We provide a pretrained model for AdaFM-Net ([`experiments/pretrained_models`](experiments/pretrained_models)) that deals with denoising from σ15 to σ75. Please run the following command directly:
+We provide a pretrained model for AdaFM-Net ([`experiments/pretrained_models`](experiments/pretrained_models)) that deals with denoising from σ15 to σ75. Please run the following commands directly:
 ```c++
+cd codes
 python interpolate.py -opt options/test/test.json
 ```
 The noise level of the input image is σ45, you are supposed to obtain similar interpolated results as follows:
@@ -47,6 +48,7 @@ The noise level of the input image is σ45, you are supposed to obtain similar i
 # Codes
 The overall code framework mainly consists of four parts - Config, Data, Model and Network.
 We also provides some useful scripts. 
+Please run all the following commands in “Codes” directory.
 
 ## How to Test
 
