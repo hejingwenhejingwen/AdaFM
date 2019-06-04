@@ -6,15 +6,63 @@
 ## Table
 Click for detailed explanations for each json file.
 
+1. [test.json](#test_json) 
 1. [train_basic.json](#train_basic_json)
 1. [train_adafm.json](#train_adafm_json) 
-1. [test.json](#test_json) 
 
+
+## test_json
+### normal testing
+please see the example config file [test](test/test.json)
+```c++
+{
+  "name": "test_001_adafmnet_noise75_DIV2K"
+  , "suffix": null
+  , "model": "sr"
+  , "crop_size": 0  // 0 for image restoration | upscale (x2,3,4) for SR
+  , "gpu_ids": [0]
+
+  , "interpolate_stride": null // 0.1, 0.05, 0.01, ... for modulation testing
+
+  , "datasets": {
+    "test_1": { // the 1st test dataset
+      "name": "CBSD68"
+      , "mode": "LRHR"
+      , "dataroot_HR": "../datasets/val_CBSD68/CBSD68" // path for HR images
+      , "dataroot_LR": "../datasets/val_CBSD68/CBSD68_noise75" // path for LR images
+    }
+    , "test_2": { // the 2nd test dataset
+      "name": "personal_images"
+      , "mode": "LR"
+      , "dataroot_LR": "../datasets/personal_images/personal_images_noise75"
+    }
+  }
+
+  , "path": {
+    "root": "../"
+    , "pretrain_model_G": "../experiments/debug_001_adafmnet_noise75_DIV2K/models/8_G.pth" // path for the trained model
+  }
+
+  , "network_G": {
+    "which_model_G": "adaptive_resnet"
+    , "norm_type": "adafm" // basic | adafm | null | instance | batch
+    , "nf": 64
+    , "nb": 16
+    , "in_nc": 3
+    , "out_nc": 3
+    , "adafm_ksize": 1 // 1 | 3 | 5 | 7
+  }
+}
+```
+### modulation testing
+for modulation testing, you should specify the interpolation stride:
+```c++
+, "interpolate_stride": 0.1 // 0.1 | 0.05 | 0.01
+```
 
 ## train_basic_json
 To train a basic model, please modify the [train basic](train/train_basic.json).
 ```c++
-
 {
   "name": "debug_001_basicmodel_noise15_DIV2K"  // !!! please remove "debug_" during training
   , "use_tb_logger": true  // use tensorboard
@@ -130,12 +178,3 @@ To finetune the AdaFM layers in AdaFM-Net, you need at least modify the followin
   }
 ```
 
-## test_json
-### normal testing
-please see the example config file [test](test/test.json)
-
-### modulation testing
-for modulation testing, you should specify the interpolation stride:
-```c++
-, "interpolate_stride": 0.1 // 0.1 | 0.05 | 0.01
-```

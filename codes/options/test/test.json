@@ -1,29 +1,29 @@
 {
-  "name": "test_001_adafmnet_noise75_DIV2K"
+  "name": "modulation_noise45_adafmnet_noise15to75"
   , "suffix": null
   , "model": "sr"
   , "crop_size": 0  // 0 for image restoration | upscale (x2,3,4) for SR
   , "gpu_ids": [0]
 
-  , "interpolate_stride": null // 0.1, 0.05, 0.01, ... for modulation testing
+  , "interpolate_stride": 0.1 // 0.1, 0.05, 0.01, ... for modulation testing
 
   , "datasets": {
-    "test_1": { // the 1st test dataset
-      "name": "CBSD68"
-      , "mode": "LRHR"
-      , "dataroot_HR": "../datasets/val_CBSD68/CBSD68" // path for HR images
-      , "dataroot_LR": "../datasets/val_CBSD68/CBSD68_noise75" // path for LR images
-    }
-    , "test_2": { // the 2nd test dataset
+//    "test_1": { // the 1st test dataset
+//      "name": "CBSD68"
+//      , "mode": "LRHR"
+//      , "dataroot_HR": "../datasets/val_CBSD68/CBSD68" // path for HR images
+//      , "dataroot_LR": "../datasets/val_CBSD68/CBSD68_noise75" // path for LR images
+//    },
+     "test_2": { // the 2nd test dataset
       "name": "personal_images"
       , "mode": "LR"
-      , "dataroot_LR": "../datasets/personal_images/personal_images_noise75"
+      , "dataroot_LR": "../datasets/personal_images/personal_images_noise45"
     }
   }
 
   , "path": {
     "root": "../"
-    , "pretrain_model_G": "../experiments/debug_001_adafmnet_noise75_DIV2K/models/8_G.pth"
+    , "pretrain_model_G": "../experiments/pretrained_models/noise15to75.pth"
   }
 
   , "network_G": {
