@@ -39,7 +39,8 @@ We provide a pretrained model for AdaFM-Net ([`experiments/pretrained_models`](e
 cd codes
 python interpolate.py -opt options/test/test.json
 ```
-The noise level of the input image is σ45, you are supposed to obtain similar interpolated results as follows:
+The results can be found in the newly created directory `AdaFM/results` 
+The noise level of the [`input image`](datasets/personal_images/personal_images_noise45/soilder.png) is σ45, and you are supposed to obtain similar interpolated results as follows:
 
 <p align="center">
   <img height="100" src="./figures/modulation_testing.PNG">
@@ -48,7 +49,7 @@ The noise level of the input image is σ45, you are supposed to obtain similar i
 # Codes
 The overall code framework mainly consists of four parts - Config, Data, Model and Network.
 We also provides some useful scripts. 
-Please run all the following commands in “Codes” directory.
+Please run all the following commands in “codes” directory.
 
 ## How to Test
 
@@ -88,4 +89,4 @@ python train.py -opt options/train/train_adafm.json
 
 ## Acknowledgement
 
-- The code is based on [BasicSR](https://github.com/xinntao/BasicSR) framework.
+- This code borrows heavily from [BasicSR](https://github.com/xinntao/BasicSR).
