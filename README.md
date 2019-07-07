@@ -1,4 +1,4 @@
-# Modulating Image Restoration with Continual Levels via Adaptive Feature Modification Layers [paper](https://arxiv.org/abs/1904.08118)
+# Modulating Image Restoration with Continual Levels via Adaptive Feature Modification Layers [paper](https://arxiv.org/abs/1904.08118), [supplementary file](http://openaccess.thecvf.com/content_CVPR_2019/supplemental/He_Modulating_Image_Restoration_CVPR_2019_supplemental.pdf)
 By Jingwen He, [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=en), and [Yu Qiao](http://mmlab.siat.ac.cn/yuqiao/)
 
 <p align="center">
