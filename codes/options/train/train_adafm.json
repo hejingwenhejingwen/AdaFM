@@ -55,7 +55,7 @@
     , "val_freq": 5e3
 
     , "manual_seed": 0
-    , "niter": 5e6 // the number of the whole training iterations
+    , "niter": 5e5 // the number of the whole training iterations
   }
 
   , "logger": {
