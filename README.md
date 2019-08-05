@@ -17,9 +17,9 @@ class AdaptiveFM(nn.Module):
 ```
 
 ### BibTex
-    @InProceedings{he2019modulating,
+    @InProceedings{He_2019_CVPR,
     author = {He, Jingwen and Dong, Chao and Qiao, Yu},
-    title = {Modulating Image Restoration with Continual Levels via Adaptive Feature Modification Layers},
+    title = {Modulating Image Restoration With Continual Levels via Adaptive Feature Modification Layers},
     booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
     month = {June},
     year = {2019}
